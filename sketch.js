@@ -146,7 +146,7 @@ function draw() {
     pop()
     //voce
     voice.listVoices();
-    voice.setVoice("Amelie");
+    voice.setVoice("Fiona");
     voice.speak("assmilk, by tyler the creator");
   }
       } else {
@@ -180,7 +180,7 @@ text(tyler.albums[1].brano, 0, 30)
 pop()
 
 voice.listVoices();
-voice.setVoice("Amelie");
+voice.setVoice("Maliska");
 voice.speak("yonkers, by Tyler the creator");
 }
   } else {
@@ -214,7 +214,7 @@ text(tyler.albums[2].brano, 0, 30)
 pop()
 
 voice.listVoices();
-voice.setVoice("Amelie");
+voice.setVoice("Laura");
 voice.speak("tamale, by Tyler the creator");
 }
 } else {
@@ -249,7 +249,7 @@ text(tyler.albums[3].brano, 0, 30)
 pop()
 
 voice.listVoices();
-voice.setVoice("Amelie");
+voice.setVoice("Samantha");
 voice.speak("smuckers, by Tyler the creator");
 }
 } else {
@@ -284,7 +284,7 @@ text(tyler.albums[4].brano, 0, 30)
 pop()
 
 voice.listVoices();
-voice.setVoice("Amelie");
+voice.setVoice("Karen");
 voice.speak("WHERE THE FLOWERS BLOOM, by Tyler the creator");
 }
 } else {
@@ -318,7 +318,7 @@ text(tyler.albums[5].brano, 0, 30)
 pop()
 
 voice.listVoices();
-voice.setVoice("Amelie");
+voice.setVoice("tanya");
 voice.speak("A BOY IS A GUN, by Tyler the creator");
 }
 } else {
