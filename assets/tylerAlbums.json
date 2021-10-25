@@ -1,0 +1,83 @@
+{
+    "number" : 7,
+    "albums" : [
+
+        {   "ordine" : 1,
+            "name" : "BASTARD",
+            "photo" : "assets/bastard.jpg",
+            "brani" : 15,
+            "minuti" : 55,
+            "ascolti" : 103124,
+            "anno" : 2009,
+            "brano": "ASSMILK"
+        },
+
+        {
+            "ordine" : 2,
+            "name" : "GOBLIN",
+            "photo" : "assets/goblin.jpg",
+            "brani" : 18 ,
+            "minuti" : 82,
+            "ascolti" : 460793,
+            "anno" : 2011,
+            "brano": "YONKERS"
+
+        },
+
+        {
+            "ordine" : 3,
+            "name" : "WOLF",
+            "photo" : "assets/wolf.jpg",
+            "brani" : 18,
+            "minuti" : 70,
+            "ascolti" : 487329,
+            "anno" : 2013,
+            "brano": "TAMALE"
+        },
+
+        {
+            "ordine" : 4,
+            "name" : "CHERRY BOMB",
+            "photo" : "assets/cherrybomb.jpg",
+            "brani" : 13,
+            "minuti" : 54,
+            "ascolti" : 358299,
+            "anno" : 2015,
+            "brano": "SMUCKERS"
+        },
+
+        {
+            "ordine" : 5,
+            "name" : "FLOWER BOY",
+            "photo" : "assets/flowerboy.jpg",
+            "brani" : 15,
+            "minuti" : 46,
+            "ascolti" : 694535,
+            "anno" : 2017,
+            "brano": "WHERE THE FLOWERS BLOOM"
+        },
+
+        {
+            "ordine" : 6,
+            "name" : "IGOR",
+            "photo" : "assets/igor.jpg",
+            "brani" : 14,
+            "minuti" : 39,
+            "ascolti" : 683048,
+            "anno" : 2019,
+            "brano": "A BOY IS A GUN"
+        },
+
+        {
+            "ordine" : 7,
+            "name" : "CALL ME IF YOU GET LOST",
+            "photo" : "assets/cmiygl.jpg",
+            "brani" : 16,
+            "minuti" : 52,
+            "ascolti" : 443704,
+            "anno" : 2021,
+            "brano": "WUSYANAME"
+        }
+
+    ]
+}
