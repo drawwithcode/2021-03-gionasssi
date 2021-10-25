@@ -12,6 +12,7 @@ function preload() {
   bg2 = loadImage("assets/background2.jpg")
   tyler = loadJSON("assets/tylerAlbums.json")
 
+  // carico tutte le canzoni (non sono riuscito a caricarle da JSON)
   assmilk = loadSound("assets/assmilk.mp3")
   yonkers = loadSound("assets/yonkers.mp3")
   tamale = loadSound("assets/tamale.mp3")
@@ -20,6 +21,7 @@ function preload() {
   abiag = loadSound("assets/abiag.mp3")
   wusyaname = loadSound("assets/wusyaname.mp3")
   
+  // carico tutte le immagini (non sono riuscito a caricarle da JSON)
   bastard = loadImage("assets/bastard.jpg")
   goblin = loadImage("assets/goblin.jpg")
   wolf = loadImage("assets/wolf.jpg")
@@ -31,29 +33,28 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight)
+createCanvas(windowWidth, windowHeight)
+cursor("assets/cursore.png", 1, 1)
 voice = new p5.Speech()
 analyzer = new p5.Amplitude();
 
 imageMode(CENTER)
 image(bg,width/2,height/2,windowWidth,windowHeight)
 
-cursor("assets/cursore.png", 1, 1)
-
-var big = 2.5;
+var big = 2.5; // scala delle copertine
 
 if (windowWidth/windowHeight < 1) {
   imageMode(CENTER)
 image(bg2,width/2,height/2,windowWidth,windowHeight)
   big = 1.5;
-}
+} // in caso la finestra sia più alta che larga cambia lo sfondo
 
 imageMode(CENTER)
 textAlign(CENTER)
 
 bastardColor = "red";
-textFont("VT323")
-textSize(20)
+
+// ogni immagine ha posizione e dimensione in base ai valori presi dal JSON
 
 image(bastard, 
   width*tyler.albums[0].ordine/8, 
@@ -98,6 +99,8 @@ image(cmiygl,
   tyler.albums[6].minuti*big,
   tyler.albums[6].minuti*big)
 
+
+// in caso la finestra sia più alta che larga scrivo il testo
   if (windowWidth/windowHeight < 1) {
   textAlign(CENTER)
   fill("red")
@@ -111,7 +114,10 @@ image(cmiygl,
 
 
 function draw() {
-   
+
+
+// per ogni disco creo due variabili distanza e raggio, 
+// e se il cursore vi passa sopra partono voce, canzone e testo
   d = dist(width*tyler.albums[0].ordine/8, 
         height*tyler.albums[0].ascolti/900000, 
         mouseX, mouseY)
@@ -119,7 +125,9 @@ function draw() {
     
   if (d < r) {
   if(assmilk.isPlaying() == false){
+    //canzone
     assmilk.play()
+    //scritta su rettangolo
     push()
     translate(6*width/7,height/6)
     fill("black")
@@ -136,7 +144,7 @@ function draw() {
     textSize(20)
     text(tyler.albums[0].brano, 0, 30)
     pop()
-    
+    //voce
     voice.listVoices();
     voice.setVoice("Amelie");
     voice.speak("assmilk, by tyler the creator");
@@ -352,11 +360,8 @@ voice.speak("wusyaname, by Tyler the creator");
 wusyaname.stop();
 }
   
-  
-  
-  
-  
-  volume = analyzer.getLevel();
+//in base al volume faccio pulsare il cerchio rosa
+   volume = analyzer.getLevel();
     volume = map(volume,0,1,0,height);
     rectMode(CENTER)
     stroke(199,255,238)
